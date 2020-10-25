@@ -1,0 +1,97 @@
+{
+  "nintendo.net": {
+    "ip_v4": {
+      "@": "0.0.0.0",
+      "\\*": "0.0.0.0",
+      "ctest\\.cdn\\.nintendo\\.net\\.": "{{SELF}}"
+    },
+    "ip_v6": {
+      "@": "::",
+      "\\*": "::",
+      "ctest\\.cdn\\.nintendo\\.net\\.": "{{SELF}}"
+    }
+  },
+  "nintendowifi.net": {
+    "ip_v4": {
+      "@": "0.0.0.0",
+      "\\*": "0.0.0.0",
+      "conntest\\.nintendowifi\\.net\\.": "{{SELF}}"
+    },
+    "ip_v6": {
+      "@": "::",
+      "\\*": "::",
+      "conntest\\.nintendowifi\\.net\\.": "{{SELF}}"
+    }
+  },
+  "playstation.com": {
+    "ip_v4": {
+      "@": "0.0.0.0",
+      "\\*": "0.0.0.0",
+      "www\\.playstation\\.com\\.": "{{SELF}}"
+    },
+    "ip_v6": {
+      "@": "::",
+      "\\*": "::",
+      "www\\.playstation\\.com\\.": "{{SELF}}"
+    }
+  },
+  "playstation.net": {
+    "ip_v4": {
+      "@": "0.0.0.0",
+      "\\*": "0.0.0.0",
+      "manuals\\.playstation\\.net\\.": "{{SELF}}",
+      "get\\.net\\.playstation\\.net\\.": "{{SELF}}",
+      "post\\.net\\.playstation\\.net\\.": "{{SELF}}",
+      "update\\.net\\.playstation\\.net\\.": "{{SELF}}",
+      "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
+      "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
+      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.ps4\\.update\\.playstation\\.net\\.": "{{SELF}}"
+    },
+    "ip_v6": {
+      "@": "::",
+      "\\*": "::",
+      "manuals\\.playstation\\.net\\.": "{{SELF}}",
+      "get\\.net\\.playstation\\.net\\.": "{{SELF}}",
+      "post\\.net\\.playstation\\.net\\.": "{{SELF}}",
+      "update\\.net\\.playstation\\.net\\.": "{{SELF}}",
+      "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
+      "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
+      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.ps4\\.update\\.playstation\\.net\\.": "{{SELF}}"
+    }
+  },
+  "ea.com": "{{BLOCKED}}",
+  "nintendo-europe.com": "{{BLOCKED}}",
+  "nintendo.at": "{{BLOCKED}}",
+  "nintendo.be": "{{BLOCKED}}",
+  "nintendo.ch": "{{BLOCKED}}",
+  "nintendo.co.jp": "{{BLOCKED}}",
+  "nintendo.co.kr": "{{BLOCKED}}",
+  "nintendo.co.nz": "{{BLOCKED}}",
+  "nintendo.co.uk": "{{BLOCKED}}",
+  "nintendo.co.za": "{{BLOCKED}}",
+  "nintendo.com": "{{BLOCKED}}",
+  "nintendo.com.au": "{{BLOCKED}}",
+  "nintendo.com.hk": "{{BLOCKED}}",
+  "nintendo.cz": "{{BLOCKED}}",
+  "nintendo.de": "{{BLOCKED}}",
+  "nintendo.dk": "{{BLOCKED}}",
+  "nintendo.es": "{{BLOCKED}}",
+  "nintendo.fi": "{{BLOCKED}}",
+  "nintendo.fr": "{{BLOCKED}}",
+  "nintendo.gr": "{{BLOCKED}}",
+  "nintendo.hu": "{{BLOCKED}}",
+  "nintendo.it": "{{BLOCKED}}",
+  "nintendo.jp": "{{BLOCKED}}",
+  "nintendo.nl": "{{BLOCKED}}",
+  "nintendo.no": "{{BLOCKED}}",
+  "nintendo.pt": "{{BLOCKED}}",
+  "nintendo.ru": "{{BLOCKED}}",
+  "nintendo.se": "{{BLOCKED}}",
+  "nintendo.tw": "{{BLOCKED}}",
+  "nintendoswitch.cn": "{{BLOCKED}}",
+  "nintendoswitch.com": "{{BLOCKED}}",
+  "nintendoswitch.com.cn": "{{BLOCKED}}",
+  "playstation.org": "{{BLOCKED}}",
+  "scea.com": "{{BLOCKED}}",
+  "sonyentertainmentnetwork.com": "{{BLOCKED}}"
+}
