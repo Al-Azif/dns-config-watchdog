@@ -8,6 +8,7 @@ import shutil
 import time
 import urllib.request
 from datetime import datetime
+from datetime import timedelta
 import sre_yield
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
@@ -248,35 +249,39 @@ def refresh_dns_zones():
 
 
 class WatchdogHandler(FileSystemEventHandler):
-    old_time = 0.0
+    def __init__(self):
+        self.last_modified = datetime.now()
 
     def on_modified(self, event):
+        if datetime.now() - self.last_modified < timedelta(seconds=1):
+            return
+        else:
+            self.last_modified = datetime.now()
+
         if event.src_path == '/opt/dns-config-watchdog/zones.json':
-            statbuf = os.stat(event.src_path)
-            new_time = statbuf.st_mtime
-            if (new_time - self.old_time) > 0.5:
-                with open('/opt/dns-config-watchdog/zones.json', 'rb') as buf:
-                    zones = json.loads(buf.read())
-                shutil.rmtree('/etc/bind/zones/', ignore_errors=True)
-                main(zones, '/etc/bind/zones/', '/etc/bind/named.conf.local')
-                refresh_dns_zones()
-            self.old_time = new_time
+          with open('/opt/dns-config-watchdog/zones.json', 'rb') as buf:
+              zones = json.loads(buf.read())
+          shutil.rmtree('/etc/bind/zones/', ignore_errors=True)
+          main(zones, '/etc/bind/zones/', '/etc/bind/named.conf.local')
+          refresh_dns_zones()
 
 
 class WatchdogHandlerCWD(FileSystemEventHandler):
-    old_time = 0.0
+    def __init__(self):
+        self.last_modified = datetime.now()
 
     def on_modified(self, event):
-        if event.src_path == os.path.join(CWD):
-            statbuf = os.stat(event.src_path)
-            new_time = statbuf.st_mtime
-            if (new_time - self.old_time) > 0.5:
-                with open(os.path.join(CWD, 'zones.json'), 'rb') as buf:
-                    zones = json.loads(buf.read())
-                shutil.rmtree(os.path.join(CWD, 'zones'), ignore_errors=True)
-                main(zones, os.path.join(CWD, 'zones'),
-                     os.path.join(CWD, 'named.conf.local'))
-            self.old_time = new_time
+        if datetime.now() - self.last_modified < timedelta(seconds=1):
+            return
+        else:
+            self.last_modified = datetime.now()
+        
+        if event.src_path == os.path.join(CWD, 'zones.json'):
+            with open(os.path.join(CWD, 'zones.json'), 'rb') as buf:
+                zones = json.loads(buf.read())
+            shutil.rmtree(os.path.join(CWD, 'zones'), ignore_errors=True)
+            main(zones, os.path.join(CWD, 'zones'),
+                os.path.join(CWD, 'named.conf.local'))
 
 
 if __name__ == '__main__':
