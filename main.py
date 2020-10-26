@@ -184,7 +184,7 @@ ns IN AAAA {REDIRECT_IPV6}
 
 
 def main(zone_json, zone_dir, conf_file):
-    shutil.rmtree(ZONE_DIR, ignore_errors=True)
+    shutil.rmtree(zone_dir, ignore_errors=True)
     if not os.path.exists(zone_dir):
         os.makedirs(zone_dir, exist_ok=True)
 
