@@ -46,7 +46,7 @@
       "update\\.net\\.playstation\\.net\\.": "{{SELF}}",
       "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
       "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
-      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.ps4\\.update\\.playstation\\.net\\.": "{{SELF}}"
+      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update\\.playstation\\.net\\.": "{{SELF}}"
     },
     "ip_v6": {
       "@": "::",
@@ -58,7 +58,7 @@
       "update\\.net\\.playstation\\.net\\.": "{{SELF}}",
       "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
       "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
-      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.ps4\\.update\\.playstation\\.net\\.": "{{SELF}}"
+      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update\\.playstation\\.net\\.": "{{SELF}}"
     }
   },
   "ea.com": "{{BLOCKED}}",
