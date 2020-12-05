@@ -16,12 +16,6 @@ from watchdog.events import FileSystemEventHandler
 SCRIPT_LOC = os.path.realpath(__file__)
 CWD = os.path.dirname(SCRIPT_LOC)
 
-SKIP_IPV4 = os.environ.get('SKIP_IPV4')
-SKIP_IPV6 = os.environ.get('SKIP_IPV6')
-
-IPV4 = os.environ.get('IPV4')
-IPV6 = os.environ.get('IPV6')
-
 REDIRECT_IPV4 = os.environ.get('REDIRECT_IPV4')
 REDIRECT_IPV6 = os.environ.get('REDIRECT_IPV6')
 
@@ -40,29 +34,15 @@ SHELL_IPV6 = os.popen('ip route get 2606:4700:4700::1111 ' +  # nosec
                       'awk -F"src " \'NR==1{split($2,a," ");' +
                       'print a[1]}\'').read().rstrip()
 
-if not IPV4 and (not SKIP_IPV4 or SKIP_IPV4 == "false"):
-    IPV4 = SHELL_IPV4
-
-if not IPV6 and (not SKIP_IPV6 or SKIP_IPV6 == "false"):
-    IPV6 = SHELL_IPV6
-
-if not IPV4 or SKIP_IPV4 != "false":
-    IPV4 = '0.0.0.0'
-
-if not IPV6 or SKIP_IPV6 != "false":
-    IPV6 = '::'
-
-if not REDIRECT_IPV4 and (not SKIP_IPV4 or SKIP_IPV4 == "false"):
+if not REDIRECT_IPV4 and not SHELL_IPV4:
+    REDIRECT_IPV4 = '0.0.0.0'
+elif not REDIRECT_IPV4:
     REDIRECT_IPV4 = SHELL_IPV4
 
-if not REDIRECT_IPV6 and (not SKIP_IPV6 or SKIP_IPV6 == "false"):
-    REDIRECT_IPV6 = SHELL_IPV6
-
-if not REDIRECT_IPV4 or SKIP_IPV4 != "false":
-    REDIRECT_IPV4 = '0.0.0.0'
-
-if not REDIRECT_IPV6 or SKIP_IPV6 != "false":
+if not REDIRECT_IPV6:and not SHELL_IPV6
     REDIRECT_IPV6 = '::'
+elif not REDIRECT_IPV6:
+    REDIRECT_IPV6 = SHELL_IPV6
 
 if not DNS_RESTART:
     DNS_RESTART = 'systemctl restart bind9 &> /dev/null'
