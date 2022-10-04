@@ -61,7 +61,6 @@
       "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update\\.playstation\\.net\\.": "{{SELF}}"
     }
   },
-  "ea.com": "{{BLOCKED}}",
   "nintendo-europe.com": "{{BLOCKED}}",
   "nintendo.at": "{{BLOCKED}}",
   "nintendo.be": "{{BLOCKED}}",
