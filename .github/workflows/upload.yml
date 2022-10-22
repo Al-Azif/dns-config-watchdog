@@ -1,0 +1,34 @@
+name: Upload zones.json
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Upload file to Cthugha
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.CTHUGHA_HOST }}
+        username: ${{ secrets.CTHUGHA_USERNAME }}
+        key: ${{ secrets.CTHUGHA_SSH2 }}
+        passphrase: ${{ secrets.CTHUGHA_PASSPHRASE }}
+        port: ${{ secrets.CTHUGHA_PORT }}
+        source: "zones.json"
+        target: "/home/github"
+        overwrite: true
+
+    - name: Upload file to Ithaqua
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.ITHAQUA_HOST }}
+        username: ${{ secrets.ITHAQUA_USERNAME }}
+        key: ${{ secrets.ITHAQUA_SSH2 }}
+        passphrase: ${{ secrets.ITHAQUA_PASSPHRASE }}
+        port: ${{ secrets.ITHAQUA_PORT }}
+        source: "zones.json"
+        target: "/home/github"
+        overwrite: true
