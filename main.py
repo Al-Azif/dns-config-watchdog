@@ -111,6 +111,7 @@ def make_bind_conf(zones):
             conf += '    file "/etc/bind/zones/db.blocked";\n'
         else:
             conf += f'    file "/etc/bind/zones/db.{root_domain}";\n'
+        conf += '    allow-query { any; };\n'
         conf += '};\n\n'
 
     return bytes(conf, 'utf-8')
@@ -159,6 +160,7 @@ ns IN AAAA {REDIRECT_IPV6}
         buf.write(bytes('''zone "the.gate" {
     type master;
     file "/etc/bind/zones/db.the.gate";
+    allow-query { any; };
 };
 ''', 'utf-8'))
 
@@ -255,7 +257,7 @@ class WatchdogHandlerCWD(FileSystemEventHandler):
             return
         else:
             self.last_modified = datetime.now()
-        
+
         if event.src_path == os.path.join(CWD, 'zones.json'):
             with open(os.path.join(CWD, 'zones.json'), 'rb') as buf:
                 zones = json.loads(buf.read())
