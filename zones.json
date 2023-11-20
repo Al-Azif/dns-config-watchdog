@@ -63,7 +63,8 @@
     "cname": {
       "b0\\.ww\\.np\\.dl": "sonycoment.vo.llnwd.net.",
       "gs\\.ww\\.np\\.dl": "sonycoment.vo.llnwd.net.",
-      "gs2\\.ww\\.prod\\.dl": "sonycoment.vo.llnwd.net."
+      "gs2\\.ww\\.prod\\.dl": "sonycoment.vo.llnwd.net.",
+      "gst\\.prod\\.dl": "sonygst.s.llnwi.net."
     }
   },
   "nintendo-europe.com": "{{BLOCKED}}",
