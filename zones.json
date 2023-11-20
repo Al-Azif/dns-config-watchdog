@@ -3,69 +3,65 @@
     "ip_v4": {
       "@": "0.0.0.0",
       "\\*": "0.0.0.0",
-      "ctest\\.cdn\\.nintendo\\.net\\.": "{{SELF}}"
+      "ctest\\.cdn": "{{SELF}}"
     },
     "ip_v6": {
       "@": "::",
       "\\*": "::",
-      "ctest\\.cdn\\.nintendo\\.net\\.": "{{SELF}}"
+      "ctest\\.cdn": "{{SELF}}"
     }
   },
   "nintendowifi.net": {
     "ip_v4": {
       "@": "0.0.0.0",
       "\\*": "0.0.0.0",
-      "conntest\\.nintendowifi\\.net\\.": "{{SELF}}"
+      "conntest": "{{SELF}}"
     },
     "ip_v6": {
       "@": "::",
       "\\*": "::",
-      "conntest\\.nintendowifi\\.net\\.": "{{SELF}}"
+      "conntest": "{{SELF}}"
     }
   },
   "playstation.com": {
     "ip_v4": {
       "@": "0.0.0.0",
       "\\*": "0.0.0.0",
-      "www\\.playstation\\.com\\.": "{{SELF}}"
+      "www": "{{SELF}}"
     },
     "ip_v6": {
       "@": "::",
       "\\*": "::",
-      "www\\.playstation\\.com\\.": "{{SELF}}"
+      "www": "{{SELF}}"
     }
   },
   "playstation.net": {
     "ip_v4": {
       "@": "0.0.0.0",
       "\\*": "0.0.0.0",
-      "manuals\\.playstation\\.net\\.": "{{SELF}}",
-      "get\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "post\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "ena\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "update\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
-      "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
-      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update\\.playstation\\.net\\.": "{{SELF}}"
+      "manuals": "{{SELF}}",
+      "get\\.net": "{{SELF}}",
+      "post\\.net": "{{SELF}}",
+      "ena\\.net": "{{SELF}}",
+      "update\\.net": "{{SELF}}",
+      "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update": "{{SELF}}",
+      "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update": "{{SELF}}",
+      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update": "{{SELF}}"
     },
     "ip_v6": {
       "@": "::",
       "\\*": "::",
-      "manuals\\.playstation\\.net\\.": "{{SELF}}",
-      "get\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "post\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "ena\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "update\\.net\\.playstation\\.net\\.": "{{SELF}}",
-      "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
-      "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
-      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update\\.playstation\\.net\\.": "{{SELF}}"
+      "manuals": "{{SELF}}",
+      "get\\.net": "{{SELF}}",
+      "post\\.net": "{{SELF}}",
+      "ena\\.net": "{{SELF}}",
+      "update\\.net": "{{SELF}}",
+      "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update": "{{SELF}}",
+      "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update": "{{SELF}}",
+      "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update": "{{SELF}}"
     },
     "cname": {
-      "gs2\\.ww\\.prod\\.dl\\.playstation\\.net\\.": [
-        "gs2.ww.prod.dl.playstation.net.c.footprint.net",
-        "dragnksux52uz.cloudfront.net",
-        "sonycoment.vo.llnwd.net"
-      ]
+      "gs2\\.ww\\.prod\\.dl": "sonycoment.vo.llnwd.net."
     }
   },
   "nintendo-europe.com": "{{BLOCKED}}",
@@ -107,37 +103,37 @@
 
   "exploit.menu": {
     "ip_v4": {
-      "cthugha\\.exploit\\.menu\\.": [
+      "cthugha": [
         "104.21.14.156",
         "172.67.203.205"
       ],
-      "ithaqua\\.exploit\\.menu\\.": [
+      "ithaqua": [
         "104.21.14.156",
         "172.67.203.205"
       ],
-      "nitocris\\.exploit\\.menu\\.": [
+      "nitocris": [
         "104.21.14.156",
         "172.67.203.205"
       ],
-      "status\\.exploit\\.menu\\.": [
+      "status": [
         "104.21.14.156",
         "172.67.203.205"
       ]
     },
     "ip_v6": {
-      "cthugha\\.exploit\\.menu\\.": [
+      "cthugha": [
         "2606:4700:3033::ac43:cbcd",
         "2606:4700:3035::6815:e9c"
       ],
-      "ithaqua\\.exploit\\.menu\\.": [
+      "ithaqua": [
         "2606:4700:3033::ac43:cbcd",
         "2606:4700:3035::6815:e9c"
       ],
-      "nitocris\\.exploit\\.menu\\.": [
+      "nitocris": [
         "2606:4700:3033::ac43:cbcd",
         "2606:4700:3035::6815:e9c"
       ],
-      "status\\.exploit\\.menu\\.": [
+      "status": [
         "2606:4700:3033::ac43:cbcd",
         "2606:4700:3035::6815:e9c"
       ]
