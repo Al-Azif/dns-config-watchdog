@@ -61,7 +61,11 @@ def make_a(domains):
             regex_list.append(each)
 
         for entry in regex_list:
-            a_record += f'{entry} IN A {domains[domain]}\n'
+            if type(domains[domain]) == list:
+                for valaue in domains[domain]:
+                    a_record += f'{entry} IN A {valaue}\n'
+            else:
+                a_record += f'{entry} IN A {domains[domain]}\n'
 
     return a_record
 
@@ -79,24 +83,78 @@ def make_aaaa(domains):
             regex_list.append(each)
 
         for entry in regex_list:
-            aaaa_record += f'{entry} IN AAAA {domains[domain]}\n'
+            if type(domains[domain]) == list:
+                for valaue in domains[domain]:
+                    aaaa_record += f'{entry} IN AAAA {valaue}\n'
+            else:
+                aaaa_record += f'{entry} IN AAAA {domains[domain]}\n'
 
     return aaaa_record
 
 
+def make_cname(domains):
+    cname_record = ''
+
+    for domain in domains:
+        regex_list = []
+
+        for each in sre_yield.AllStrings(domain):
+            regex_list.append(each)
+
+        for entry in regex_list:
+            if type(domains[domain]) == list:
+                for valaue in domains[domain]:
+                    cname_record += f'{entry} IN CNAME {valaue}\n'
+            else:
+                cname_record += f'{entry} IN CNAME {domains[domain]}\n'
+
+    return cname_record
+
+
+def make_txt(domains):
+    txt_record = ''
+
+    for domain in domains:
+        regex_list = []
+
+        for each in sre_yield.AllStrings(domain):
+            regex_list.append(each)
+
+        for entry in regex_list:
+            if type(domains[domain]) == list:
+                for valaue in domains[domain]:
+                    txt_record += f'{entry} IN TXT {valaue}\n'
+            else:
+                txt_record += f'{entry} IN TXT {domains[domain]}\n'
+
+    return txt_record
+
+
 def make_zone(info_object):
     yyyymmdd = datetime.today().strftime('%Y%m%d')
-    a_records = make_a(info_object['ip_v4'])
-    aaaa_records = make_aaaa(info_object['ip_v6'])
     zone = f'''$TTL 3600
 ;; SOA Record
 @ IN SOA ns.the.gate root.the.gate. {yyyymmdd} 7200 3600 86400 3600
 
 ;; NS Records
 @ IN NS ns.the.gate.
-
 '''
-    zone += f';; A Records\n{a_records}\n;; AAAA Records\n{aaaa_records}'
+
+    if 'ip_v4' in info_object:
+        a_records = make_a(info_object['ip_v4'])
+        zone += f'\n;; A Records\n{a_records}'
+
+    if 'ip_v6' in info_object:
+        aaaa_records = make_aaaa(info_object['ip_v6'])
+        zone += f'\n;; AAAA Records\n{aaaa_records}'
+
+    if 'cname' in info_object:
+        cname_records = make_cname(info_object['cname'])
+        zone += f'\n;; CNAME Records\n{cname_records}'
+
+    if 'txt' in info_object:
+        txt_records = make_txt(info_object['txt'])
+        zone += f'\n;; TXT Records\n{txt_records}'
 
     return bytes(zone, 'utf-8')
 

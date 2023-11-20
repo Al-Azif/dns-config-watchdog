@@ -59,6 +59,13 @@
       "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
       "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update\\.playstation\\.net\\.": "{{SELF}}",
       "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update\\.playstation\\.net\\.": "{{SELF}}"
+    },
+    "cname": {
+      "gs2\\.ww\\.prod\\.dl\\.playstation\\.net\\.": [
+        "gs2.ww.prod.dl.playstation.net.c.footprint.net",
+        "dragnksux52uz.cloudfront.net",
+        "sonycoment.vo.llnwd.net"
+      ]
     }
   },
   "nintendo-europe.com": "{{BLOCKED}}",
@@ -96,5 +103,44 @@
   "nintendoservicecentre.co.uk": "{{BLOCKED}}",
   "playstation.org": "{{BLOCKED}}",
   "scea.com": "{{BLOCKED}}",
-  "sonyentertainmentnetwork.com": "{{BLOCKED}}"
+  "sonyentertainmentnetwork.com": "{{BLOCKED}}",
+
+  "exploit.menu": {
+    "ip_v4": {
+      "cthugha\\.exploit\\.menu\\.": [
+        "104.21.14.156",
+        "172.67.203.205"
+      ],
+      "ithaqua\\.exploit\\.menu\\.": [
+        "104.21.14.156",
+        "172.67.203.205"
+      ],
+      "nitocris\\.exploit\\.menu\\.": [
+        "104.21.14.156",
+        "172.67.203.205"
+      ],
+      "status\\.exploit\\.menu\\.": [
+        "104.21.14.156",
+        "172.67.203.205"
+      ]
+    },
+    "ip_v6": {
+      "cthugha\\.exploit\\.menu\\.": [
+        "2606:4700:3033::ac43:cbcd",
+        "2606:4700:3035::6815:e9c"
+      ],
+      "ithaqua\\.exploit\\.menu\\.": [
+        "2606:4700:3033::ac43:cbcd",
+        "2606:4700:3035::6815:e9c"
+      ],
+      "nitocris\\.exploit\\.menu\\.": [
+        "2606:4700:3033::ac43:cbcd",
+        "2606:4700:3035::6815:e9c"
+      ],
+      "status\\.exploit\\.menu\\.": [
+        "2606:4700:3033::ac43:cbcd",
+        "2606:4700:3035::6815:e9c"
+      ]
+    }
+  }
 }
