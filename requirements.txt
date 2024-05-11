@@ -1,0 +1,2 @@
+sre-yield==1.2
+watchdog==4.0.0
