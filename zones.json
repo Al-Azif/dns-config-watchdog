@@ -56,6 +56,7 @@
       "post\\.net": "{{SELF}}",
       "ena\\.net": "{{SELF}}",
       "update\\.net": "{{SELF}}",
+      "oss\\.dl": "{{SELF}}",
       "d(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update": "{{SELF}}",
       "f(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps3|ps4|ps5|psp2)\\.update": "{{SELF}}",
       "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update": "{{SELF}}"
