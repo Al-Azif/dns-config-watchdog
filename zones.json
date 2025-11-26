@@ -77,10 +77,10 @@
       "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update": "{{SELF}}"
     },
     "cname": {
-      "b0\\.ww\\.np\\.dl": "a150.d.akamai.net.",
-      "gs\\.ww\\.np\\.dl": "gs-geo.psn.akadns99.net.",
-      "gs2\\.ww\\.prod\\.dl": "gs2-geo.psn.akadns99.net.",
-      "gst\\.prod\\.dl": "gst-geo.psn.akadns99.net."
+      "b0\\.ww\\.np\\.dl": "b0.ww.np.dl.playstation.net.edgesuite.net.",
+      "gs\\.ww\\.np\\.dl": "gs.ww.np.dl.playstation.net.edgesuite.net.",
+      "gs2\\.ww\\.prod\\.dl": "gs2.ww.prod.dl.playstation.net.edgesuite.net.",
+      "gst\\.prod\\.dl": "gst.prod.dl.playstation.net.edgesuite.net."
     }
   },
   "nintendo-europe.com": "{{BLOCKED}}",
