@@ -77,10 +77,10 @@
       "h(jp|us|eu|kr|uk|mx|au|sa|tw|ru|cn|hk|br)01\\.(ps4|ps5)\\.update": "{{SELF}}"
     },
     "cname": {
-      "b0\\.ww\\.np\\.dl": "sonycoment.vo.llnwd.net.",
-      "gs\\.ww\\.np\\.dl": "sonycoment.vo.llnwd.net.",
-      "gs2\\.ww\\.prod\\.dl": "sonycoment.vo.llnwd.net.",
-      "gst\\.prod\\.dl": "sonygst.s.llnwi.net."
+      "b0\\.ww\\.np\\.dl": "a150.d.akamai.net.",
+      "gs\\.ww\\.np\\.dl": "gs-geo.psn.akadns99.net.",
+      "gs2\\.ww\\.prod\\.dl": "gs2-geo.psn.akadns99.net.",
+      "gst\\.prod\\.dl": "gst-geo.psn.akadns99.net."
     }
   },
   "nintendo-europe.com": "{{BLOCKED}}",
